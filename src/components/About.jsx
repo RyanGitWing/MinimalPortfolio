@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import { Box, IconButton, Typography, Stack } from "@mui/material";
 import { GitHub, LinkedIn, Instagram } from "@mui/icons-material";
 import profile from "./../../public/img/profile.jpg";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTheme } from "@emotion/react";
 
 function About() {
@@ -96,7 +96,7 @@ function About() {
         </Box>
         <div className="relative flex items-center justify-center w-80 h-80">
           <img src={profile} className="w-auto h-60 md:h-80 rounded-full" />
-          {/* <motion.svg
+          <motion.svg
             viewBox="0 0 500 500"
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[340px] md:w-[450px]"
             fill="transparent"
@@ -120,7 +120,7 @@ function About() {
                 repeatType: "reverse",
               }}
             />
-          </motion.svg> */}
+          </motion.svg>
         </div>
       </Stack>
     </div>
