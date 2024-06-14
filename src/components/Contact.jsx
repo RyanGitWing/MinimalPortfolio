@@ -1,6 +1,20 @@
 import React from "react";
 import Title from "./Title";
 import { useTheme } from "@emotion/react";
+import { Button } from "@mui/material";
+import { styled } from "@mui/system";
+
+const HoverButton = styled(Button)(({ theme }) => ({
+  // backgroundColor: theme.palette.accent.background, // Use theme primary color
+  color: theme.palette.primary.background,
+  backgroundImage: `linear-gradient(90deg, #00ffa6 50%,  ${theme.palette.primary.main} 50%)`,
+  backgroundSize: "200% 100%",
+  backgroundPosition: "right bottom",
+  transition: "background-position 0.5s ease-out",
+  "&:hover": {
+    backgroundPosition: "left bottom",
+  },
+}));
 
 function Contact() {
   const theme = useTheme();
@@ -35,13 +49,17 @@ function Contact() {
             className="p-2 mb-4 bg-transparent rounded-md"
             style={{ border: `2px solid ${theme.palette.primary.main}` }}
           />
-          <button
+          <HoverButton
             type="submit"
-            className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md"
-            style={{ color: theme.palette.primary.background, backgroundColor: theme.palette.primary.main}}
+            sx={{
+              display: "inline-block",
+              py: "12px",
+              fontWeight: "700",
+              borderRadius: "8px",
+            }}
           >
             Send
-          </button>
+          </HoverButton>
         </form>
       </div>
     </div>
