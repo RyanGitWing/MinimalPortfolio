@@ -11,12 +11,12 @@ import React from "react";
 function App() {
   return (
     <div>
-      <ThemeProvider>
-        <Navbar />
-        {/* <div id="about">
+      {/* <ThemeProvider> */}
+        {/* <Navbar /> */}
+        <div id="about">
           <About />
-        </div> */}
-        <div id="skills">
+        </div>
+        {/* <div id="skills">
           <Skills />
         </div>
         <div id="experiences">
@@ -28,8 +28,8 @@ function App() {
         <div id="contact">
           <Contact />
         </div>
-        <Footer />
-      </ThemeProvider>
+        <Footer /> */}
+      {/* </ThemeProvider> */}
     </div>
   );
 }
