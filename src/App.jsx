@@ -11,11 +11,11 @@ import React from "react";
 function App() {
   return (
     <div>
-      {/* <ThemeProvider>
+      <ThemeProvider>
         <Navbar />
-        <div id="about">
+        {/* <div id="about">
           <About />
-        </div>
+        </div> */}
         <div id="skills">
           <Skills />
         </div>
@@ -29,8 +29,7 @@ function App() {
           <Contact />
         </div>
         <Footer />
-      </ThemeProvider> */}
-      asdasdas
+      </ThemeProvider>
     </div>
   );
 }
