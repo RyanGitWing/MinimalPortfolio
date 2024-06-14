@@ -13,21 +13,11 @@ function App() {
     <div>
       {/* <ThemeProvider> */}
       {/* <Navbar /> */}
-      <div id="about">
         <About />
-      </div>
-      <div id="skills">
         <Skills />
-      </div>
-      <div id="experiences">
         <Experiences />
-      </div>
-      <div id="projects">
         <Projects />
-      </div>
-      <div id="contact">
         <Contact />
-      </div>
       <Footer />
       {/* </ThemeProvider> */}
     </div>
