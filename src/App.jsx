@@ -28,7 +28,7 @@ function App() {
       <div id="contact">
         <Contact />
       </div>
-      {/* <Footer /> */}
+      <Footer />
       </ThemeProvider>
     </div>
   );
