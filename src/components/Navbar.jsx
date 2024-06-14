@@ -74,6 +74,7 @@ const Navbar = () => {
               <Button
                 sx={{
                   color: "secondary.main",
+                  fontWeight: 600,
                   "&:hover": {
                     color: "accent.background",
                     backgroundColor: "accent.main",

@@ -8,7 +8,7 @@ function Projects() {
     <div className="flex flex-col mb-10 mx-auto mt-[100px] p-8">
         <Title>Projects</Title>
       <div className="flex flex-col md:flex-row items-center justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
+        <div className="w-full lg:w-7/12 xl:w-6/12 grid grid-cols-1 md:grid-cols-2 gap-10 mt-12">
           {ProjectsData.map((project) => (
             <ProjectsItem
               imgURL={project.imgURL}
