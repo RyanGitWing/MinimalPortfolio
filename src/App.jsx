@@ -5,7 +5,7 @@ import Contact from "./components/Contact";
 import Experiences from "./components/Experiences";
 import Skills from "./components/Skills";
 import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/ThemeContext";
 
 function App() {
