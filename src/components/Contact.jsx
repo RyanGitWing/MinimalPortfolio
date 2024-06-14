@@ -25,14 +25,14 @@ function Contact() {
             type="text"
             name="email"
             placeholder="Email"
-            className="my-2 p-2 bg-transparent rounded-md focus:outline-none"
+            className="my-2 p-2 bg-transparent rounded-md"
             style={{ border: `2px solid ${theme.palette.primary.main}` }}
           />
           <textarea
             name="message"
             placeholder="Message"
             rows="10"
-            className="p-2 mb-4 bg-transparent rounded-md focus:outline-none"
+            className="p-2 mb-4 bg-transparent rounded-md"
             style={{ border: `2px solid ${theme.palette.primary.main}` }}
           />
           <button
@@ -40,7 +40,7 @@ function Contact() {
             className="text-center inline-block px-8 py-3 w-max text-base font-medium rounded-md"
             style={{ color: theme.palette.primary.background, backgroundColor: theme.palette.primary.main}}
           >
-            Work for me
+            Send
           </button>
         </form>
       </div>
