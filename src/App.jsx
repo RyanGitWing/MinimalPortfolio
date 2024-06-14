@@ -16,7 +16,7 @@ function App() {
         <div id="about">
           <About />
         </div>
-        {/* <div id="skills">
+        <div id="skills">
           <Skills />
         </div>
         <div id="experiences">
@@ -28,7 +28,7 @@ function App() {
         <div id="contact">
           <Contact />
         </div>
-        <Footer /> */}
+        <Footer />
       {/* </ThemeProvider> */}
     </div>
   );
