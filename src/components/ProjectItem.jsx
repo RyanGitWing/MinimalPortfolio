@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 
 function ProjectItem({ title, imgURL, stack, link }) {
   return (
-    <div className="hover:scale-150 flex flex-col h-full cursor-pointer">
+    <div className="md:hover:scale-150 flex flex-col h-full cursor-pointer">
       <Box
         borderRadius={2}
         border="2px solid"

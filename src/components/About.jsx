@@ -12,15 +12,15 @@ function About() {
   return (
     <div className="flex flex-col mb-10 mx-auto mt-[40px] md:mt-[200px] p-8 items-center justify-center">
       <Stack
-        direction={{ xs: "column-reverse", lg: "row" }}
-        spacing={{ xs: 2, md: 10 }}
+        direction={{ xs: "column-reverse", md: "row" }}
+        spacing={{ xs: 2, lg: 10 }}
       >
-        <Box justifyContent="center" alignItems="center">
+        <div className="justify-center align-middle">
           <Typography
             variant="h1"
             fontWeight="bold"
             mb="10px"
-            fontSize={{ xs: "56px", md: "6rem" }}
+            fontSize={{ xs: "52px", lg: "4.8rem" }}
           >
             Ryan Nguyen
           </Typography>
@@ -28,7 +28,7 @@ function About() {
             variant="h4"
             textAlign="left"
             mb="10px"
-            fontSize={{ xs: "24px", md: "2.125rem" }}
+            fontSize={{ xs: "24px", lg: "2.125rem" }}
           >
             <TypeAnimation
               sequence={[
@@ -93,12 +93,12 @@ function About() {
               <Instagram fill-current sx={{ color: "secondary.main" }} />
             </IconButton>
           </Stack>
-        </Box>
+        </div>
         <div className="relative flex items-center justify-center w-80 h-80">
-          <img src={profile} className="w-auto h-60 md:h-80 rounded-full" />
+          <img src={profile} className="w-auto h-60 md:h-72 rounded-full" />
           <motion.svg
             viewBox="0 0 500 500"
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[340px] md:w-[450px]"
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[340px] md:w-[400px]"
             fill="transparent"
           >
             <motion.circle

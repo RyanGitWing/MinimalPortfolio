@@ -24,6 +24,16 @@ export const lightTheme = createTheme({
       'sans-serif',
     ].join(','),
   },
+  breakpoints: {
+    values: {
+      xs: 0,     // default
+      sm: 640,   // TailwindCSS sm
+      md: 768,   // TailwindCSS md
+      lg: 1024,  // TailwindCSS lg
+      xl: 1280,  // TailwindCSS xl
+      xxl: 1536, // TailwindCSS 2xl
+    },
+  },
   overrides: {
     MuiCssBaseline: {
       '@global': {
@@ -64,6 +74,16 @@ export const darkTheme = createTheme({
       'Arial',
       'sans-serif',
     ].join(','),
+  },
+  breakpoints: {
+    values: {
+      xs: 0,     // default
+      sm: 640,   // TailwindCSS sm
+      md: 768,   // TailwindCSS md
+      lg: 1024,  // TailwindCSS lg
+      xl: 1280,  // TailwindCSS xl
+      xxl: 1536, // TailwindCSS 2xl
+    },
   },
   overrides: {
     MuiCssBaseline: {
