@@ -36,7 +36,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < theme.breakpoints.values.md) {
-        setOffset(-80);
+        setOffset(-40);
       } else {
         setOffset(-150);
       }
@@ -60,42 +60,42 @@ const Navbar = () => {
       >
         rynuyn
       </Typography>
-      <Box sx={{ position: "fixed", top: "0", right: "0", m: "14px" }} zIndex='1'>
+      <Box
+        sx={{ position: "fixed", top: "0", right: "0", m: "14px" }}
+        zIndex="1"
+      >
         <IconButton onClick={handleClick}>
-          <MenuIcon />
+          <MenuIcon sx={{ color: "primary.main" }} />
         </IconButton>
         <Menu
           id="basic-menu"
           anchorEl={anchorEl}
           open={open}
           onClose={handleClose}
-          MenuListProps={{
-            "aria-labelledby": "basic-button",
-          }}
         >
           {pages.map((page) => (
-            <MenuItem
-              sx={{
-                fontWeight: 600,
-              }}
+            <Link
+              key={page}
+              to={page.toLowerCase()}
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={offset}
+              style={{ textDecoration: "none", color: "inherit" }}
             >
-              <Link
-                key={page}
-                to={page.toLowerCase()}
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={offset}
-                style={{ textDecoration: "none", color: "inherit" }}
+              <MenuItem
+                sx={{
+                  fontWeight: 600,
+                }}
                 onClick={handleClose}
               >
                 {page}
-              </Link>
-            </MenuItem>
+              </MenuItem>
+            </Link>
           ))}
         </Menu>
-        <ModeToggle/>
+        <ModeToggle />
       </Box>
     </>
   ) : (
@@ -125,7 +125,7 @@ const Navbar = () => {
         >
           rynuyn
         </Typography>
-        <Box sx={{ display: "flex", gap: {md:1, lg:4} }}>
+        <Box sx={{ display: "flex", gap: { md: 1, lg: 4 } }}>
           {pages.map((page) => (
             <Link
               key={page}
