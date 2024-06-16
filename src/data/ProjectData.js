@@ -1,26 +1,26 @@
 export default [
     {
         title: 'SYSC BlogPost',
-        imgURL: './img/background.jpg',
+        imgURL: './img/SYSC.PNG',
         stack: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL'],
-        link: 'http://terminal'
+        link: 'https://github.com/RyanGitWing/SYSC-4504/tree/main/Ryan_Nguyen_A03'
     },
     {
         title: 'Elevator System',
-        imgURL: './img/temp.jpg',
+        imgURL: './img/Elevator.gif',
         stack: ['Java', 'JUnit', 'DatagramPacket', 'DatagramSocket', 'GUI'],
-        link: 'http://terminal'
+        link: 'https://github.com/RyanGitWing/ElevatorSystem'
     },
     {
         title: 'cuWhiteBoard',
-        imgURL: './img/temp.jpg',
+        imgURL: './img/cuWhiteBoard.gif',
         stack: ['ReactTs', 'HTML', 'CSS', 'NodeJs', 'PostgreSQL', 'Heroku', 'ExpressJs', 'Socket.io', 'Fabric.js'],
-        link: 'http://terminal'
+        link: 'https://github.com/RyanGitWing/WhiteboardApplication/tree/main'
     },
     {
         title: 'Portfolio Website',
-        imgURL: './img/temp.jpg',
+        imgURL: './img/portfolio.PNG',
         stack: ['ReactJs', 'HTML', 'CSS', 'MUI', 'TailwindCSS', 'Framer', 'Vite'],
-        link: 'http://terminal'
+        link: 'https://github.com/RyanGitWing/MinimalPortfolio'
     },
 ]

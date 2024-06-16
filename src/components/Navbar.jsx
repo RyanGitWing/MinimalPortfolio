@@ -1,4 +1,4 @@
-import React, { useState, useEffect, forwardRef } from "react";
+import React, { useState, useEffect } from "react";
 import {
   AppBar,
   Typography,
@@ -11,8 +11,6 @@ import {
   useMediaQuery,
   Menu,
   MenuItem,
-  Dialog,
-  Slide,
 } from "@mui/material";
 import { Link } from "react-scroll";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -22,30 +20,46 @@ const Navbar = () => {
   const pages = ["About", "Skills", "Experiences", "Projects", "Contact"];
   const theme = useTheme();
   const [offset, setOffset] = useState(-150);
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  const isMdScreen = useMediaQuery(theme.breakpoints.up("md"));
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
 
-  const isMdScreen = useMediaQuery(theme.breakpoints.up("md"));
-
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < theme.breakpoints.values.md) {
-        setOffset(-40);
-      } else {
-        setOffset(-150);
-      }
+      setOffset(window.innerWidth < theme.breakpoints.values.md ? -40 : -150);
     };
 
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, [theme.breakpoints]);
+
+  const renderMenuItems = () => {
+    return pages.map((page) => (
+      <Link
+        key={page}
+        to={page.toLowerCase()}
+        smooth={true}
+        duration={500}
+        spy={true}
+        exact="true"
+        offset={offset}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
+        <MenuItem sx={{ fontWeight: 600 }} onClick={handleClose}>
+          {page}
+        </MenuItem>
+      </Link>
+    ));
+  };
 
   return !isMdScreen ? (
     <>
@@ -60,40 +74,12 @@ const Navbar = () => {
       >
         rynuyn
       </Typography>
-      <Box
-        sx={{ position: "fixed", top: "0", right: "0", m: "14px" }}
-        zIndex="1"
-      >
+      <Box sx={{ position: "fixed", top: "0", right: "0", m: "14px" }} zIndex="1">
         <IconButton onClick={handleClick}>
           <MenuIcon sx={{ color: "primary.main" }} />
         </IconButton>
-        <Menu
-          id="basic-menu"
-          anchorEl={anchorEl}
-          open={open}
-          onClose={handleClose}
-        >
-          {pages.map((page) => (
-            <Link
-              key={page}
-              to={page.toLowerCase()}
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={offset}
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <MenuItem
-                sx={{
-                  fontWeight: 600,
-                }}
-                onClick={handleClose}
-              >
-                {page}
-              </MenuItem>
-            </Link>
-          ))}
+        <Menu id="basic-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
+          {renderMenuItems()}
         </Menu>
         <ModeToggle />
       </Box>
