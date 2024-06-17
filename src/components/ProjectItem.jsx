@@ -2,8 +2,11 @@ import React from "react";
 import { Box } from "@mui/material";
 
 function ProjectItem({ title, imgURL, stack, link }) {
+  const handleClick = () => {
+
+  }
   return (
-    <div className=" hover:scale-125 duration-150 md:hover:scale-150 flex flex-col h-full cursor-pointer">
+    <a href={link} target="_blank" className="duration-150 md:hover:scale-150 flex flex-col h-full cursor-pointer">
       <Box
         borderRadius={2}
         border="2px solid"
@@ -40,7 +43,7 @@ function ProjectItem({ title, imgURL, stack, link }) {
           </p>
         </div>
       </Box>
-    </div>
+    </a>
   );
 }
 

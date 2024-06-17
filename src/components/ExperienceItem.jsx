@@ -1,11 +1,11 @@
 import React from "react";
-import { useTheme, Typography } from "@mui/material";
+import { useTheme, Typography, Box } from "@mui/material";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { Work, School } from "@mui/icons-material";
+import { Work, School, CalendarToday } from "@mui/icons-material";
 
 function ExperienceItem({ json1, json2 }) {
   const theme = useTheme();
@@ -37,7 +37,10 @@ function ExperienceItem({ json1, json2 }) {
               {item.title}
             </Typography>
             <Typography variant="h7">{item.company}</Typography>
-            <Typography>{item.year}</Typography>
+            <Typography>
+              <CalendarToday sx={{ fontSize: "18px", mr: "5px" }} />
+              {item.year}
+            </Typography>
           </VerticalTimelineElement>
         ))}
 
@@ -64,7 +67,10 @@ function ExperienceItem({ json1, json2 }) {
               {item.title}
             </Typography>
             <Typography variant="h7">{item.company}</Typography>
-            <Typography>{item.year}</Typography>
+            <Typography>
+              <CalendarToday sx={{ fontSize: "18px", mr: "5px" }} />
+              {item.year}
+            </Typography>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
