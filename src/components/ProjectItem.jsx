@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 
 function ProjectItem({ title, imgURL, stack, link }) {
   return (
-    <div className="md:hover:scale-150 flex flex-col h-full cursor-pointer">
+    <div className=" hover:scale-125 duration-150 md:hover:scale-150 flex flex-col h-full cursor-pointer">
       <Box
         borderRadius={2}
         border="2px solid"
@@ -16,7 +16,7 @@ function ProjectItem({ title, imgURL, stack, link }) {
         <img
           src={imgURL}
           alt="Portfolio Item"
-          className="w-full h-36 md:h-48 object-cover "
+          className="w-full h-36 md:h-72 object-cover rounded-2xl p-2"
         />
         <div className="flex flex-col justify-between flex-grow p-4">
           <h3 className="text-lg md:text-xl mb-2 md:mb-3 font-bold">
