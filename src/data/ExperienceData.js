@@ -49,7 +49,7 @@ export default [
   },
   {
     title: "FullStack Developer Intern",
-    year: "May 2024 - Present",
+    year: "May 2024 - August 2024",
     company: "Esportium",
     type: 'work'
   },
