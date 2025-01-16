@@ -24,12 +24,6 @@ export default [
     type: 'work'
   },
   {
-    title: "Bachelor of Engineering - Software Engineering",
-    year: "September 2018 - April 2023",
-    company: "Carleton University",
-    type: 'school'
-  },
-  {
     title: "Test Engineer Intern",
     year: "January 2021 - May 2021",
     company: "Curtiss-Wright Defense Solutions",
@@ -48,9 +42,21 @@ export default [
     type: 'work'
   },
   {
-    title: "FullStack Developer Intern",
-    year: "May 2024 - August 2024",
+    title: "Bachelor of Engineering - Software Engineering",
+    year: "September 2018 - April 2023",
+    company: "Carleton University",
+    type: 'school'
+  },
+  {
+    title: "Freelance FullStack Developer",
+    year: "May 2024 - December 2024",
     company: "Esportium",
+    type: 'work'
+  },
+  {
+    title: "Junior Software Engineer",
+    year: "January 2025 - Present",
+    company: "Curtiss-Wright Defense Solutions",
     type: 'work'
   },
 ];
